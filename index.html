@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Melodis - Créez une chanson personnalisée pour vos événements. Mariage, Anniversaire, Entreprise. Émotion garantie.">
+    <meta name="theme-color" content="#050505">
+
+    <!-- ================= SOCIAL MEDIA READY ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Melodis | Offrez le seul cadeau qui dure toute une vie 🎵">
+    <meta property="og:description"
+        content="Transformez vos émotions en chanson. Essayez notre IA génératrice de paroles !">
+    <meta property="og:image" content="assets/social-preview.jpg">
+
+    <title>Melodis | L'Émotion en Mélodie & IA</title>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS ANIMATION LIBRARY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS EXTERNE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 1. LOADER -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner-vinyl"></div>
+            <h3 class="text-gold">Melodis.</h3>
+            <p style="color:#666; font-size:0.8rem; margin-top:10px;">Chargement de l'émotion...</p>
+        </div>
+    </div>
+
+    <!-- OVERLAY MENU MOBILE -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- 2. HEADER -->
+    <header class="header">
+        <nav class="container navbar">
+            <div class="logo">
+                <img src="assets/Logo 3.png" alt="Melodis Logo" style="height: 60px;">
+            </div>
+            <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            <div class="nav-links" id="nav-links">
+                <a href="#process" class="nav-link" onclick="closeMenu()">Comment ça marche</a>
+                <a href="#demos" class="nav-link" onclick="closeMenu()">Nos Réalisations</a>
+                <a href="#pricing" class="nav-link" onclick="closeMenu()">Nos Formules</a>
+                <a href="https://wa.me/22999542520?text=Bonjour%20Melodis,%20je%20veux%20lancer%20ma%20commande%20!"
+                    class="btn btn-gold" onclick="closeMenu()">
+                    <i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i> Commander
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="hero-animate-text">Faites-les pleurer<br>de joie.</h1>
+            <p class="section-subtitle" style="color: #ddd;">
+                Transformez votre histoire d'amour, votre mariage ou votre passion en une chanson 100% sur-mesure. Une
+                émotion inoubliable générée par IA et nos experts, livrée en 72h.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/22999542520?text=Bonjour%20Melodis,%20je%20veux%20créer%20mon%20émotion%20!"
+                    class="btn btn-gold"><i class="fa-brands fa-whatsapp"
+                        style="margin-right:8px; font-size:1.2rem;"></i> Je veux ma chanson</a>
+                <a href="#demos" class="btn btn-outline"><i class="fa-solid fa-play" style="margin-right:8px;"></i>
+                    Écouter un extrait</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONCEPT -->
+    <section id="concept" class="section-padding" style="background: #0a0a0a;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Finis les cadeaux sans âme...</h2>
+            <p class="section-subtitle" data-aos="fade-up">Un gâteau se mange. Une fleur fane. Une mélodie reste
+                éternelle. Offrez le seul cadeau qu'ils garderont toute leur vie.</p>
+            <div class="audio-grid">
+                <div class="card-glass" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h3>100% Votre Histoire</h3>
+                    <p style="color:#ccc; font-size:0.9rem; margin-top:10px;">Vos anecdotes, vos prénoms, vos blagues
+                        privées. Chaque parole compte et personne d'autre n'aura cette chanson.</p>
+                </div>
+                <div class="card-glass" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Qualité Studio (Radio)</h3>
+                    <p style="color:#ccc; font-size:0.9rem; margin-top:10px;">Une production vocale et instrumentale
+                        digne des hits du moment. Prête à être jouée à votre mariage ou soirée.</p>
+                </div>
+                <div class="card-glass" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Rapide (72h)</h3>
+                    <p style="color:#ccc; font-size:0.9rem; margin-top:10px;">Besoin urgent pour ce week-end ? On livre
+                        en express directement sur WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 5. COMMENT ÇA MARCHE (NOUVEAU) -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Comment créer votre émotion ?</h2>
+            <p class="section-subtitle" data-aos="fade-up">En 3 étapes simples, sans bouger de votre téléphone.</p>
+            <div class="audio-grid">
+                <div class="card-glass" data-aos="fade-right">
+                    <div class="icon-box" style="background:transparent; border: 2px solid var(--gold-main);">1</div>
+                    <h3 style="text-align:center;">Racontez-nous</h3>
+                    <p style="text-align:center; color:#ccc; font-size:0.9rem; margin-top:10px;">Écrivez-nous sur
+                        WhatsApp pour nous parler de la personne, du style musical et de l'ambiance voulue.</p>
+                </div>
+                <div class="card-glass" data-aos="fade-up">
+                    <div class="icon-box" style="background:transparent; border: 2px solid var(--gold-main);">2</div>
+                    <h3 style="text-align:center;">Notre Magie</h3>
+                    <p style="text-align:center; color:#ccc; font-size:0.9rem; margin-top:10px;">Nos experts et notre IA
+                        composent, écrivent et produisent votre mélodie ultra-personnalisée.</p>
+                </div>
+                <div class="card-glass" data-aos="fade-left">
+                    <div class="icon-box" style="background:transparent; border: 2px solid var(--gold-main);">3</div>
+                    <h3 style="text-align:center;">Écoutez & Pleurez</h3>
+                    <p style="text-align:center; color:#ccc; font-size:0.9rem; margin-top:10px;">Vous recevez le titre
+                        final en 72h. Préparez les mouchoirs, l'effet de surprise est garanti à 100%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DÉMOS -->
+    <section id="demos" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Écoutez le Résultat</h2>
+            <p class="section-subtitle" data-aos="fade-up">De vraies créations pour nos clients.</p>
+            <div class="audio-grid">
+                <div class="card-glass" data-aos="fade-right">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <h3>Mariage Romantique</h3>
+                        <i class="fa-solid fa-heart text-gold"></i>
+                    </div>
+                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Piano Voix</p>
+                    <audio controls preload="metadata"
+                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
+                        <source src="assets/demo1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="card-glass" data-aos="fade-up">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <h3>Anniversaire Festif</h3>
+                        <i class="fa-solid fa-cake-candles text-gold"></i>
+                    </div>
+                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Afrobeat</p>
+                    <audio controls preload="metadata"
+                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
+                        <source src="assets/Joy.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="card-glass" data-aos="fade-left">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <h3>Jingle Pro</h3>
+                        <i class="fa-solid fa-briefcase text-gold"></i>
+                    </div>
+                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Dynamique</p>
+                    <audio controls preload="metadata"
+                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
+                        <source src="assets/demo3.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRICING -->
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Choisissez l'intensité du souvenir</h2>
+            <p class="section-subtitle">Trouvez la formule idéale pour sublimer votre message.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-right">
+                    <h3>Essentiel</h3>
+                    <ul class="price-features">
+                        <li>Une chanson unique (2-3 min)</li>
+                        <li>Fichier MP3 Haute Qualité</li>
+                        <li>Prête à l'écoute sur téléphone</li>
+                    </ul>
+                    <a href="https://wa.me/22999542520?text=Je%20suis%20intéressé(e)%20par%20le%20Pack%20Essentiel"
+                        class="btn btn-outline full-width">Réclamer ce pack</a>
+                </div>
+                <div class="pricing-card popular" data-aos="zoom-in">
+                    <div class="popular-tag">La Préférée</div>
+                    <h3 class="text-gold">Premium</h3>
+                    <ul class="price-features">
+                        <li>Jusqu'à 3 versions musicales différentes</li>
+                        <li>Vidéo Paroles animées (Lyrics)</li>
+                        <li>Format idéal pour TikTok/Insta</li>
+                    </ul>
+                    <a href="https://wa.me/22999542520?text=Je%20veux%20réserver%20le%20Pack%20Premium"
+                        class="btn btn-gold full-width" style="box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);"><i
+                            class="fa-brands fa-whatsapp"
+                            style="margin-right:8px; font-size:1.1rem; color:#25D366;"></i> Réserver sur WhatsApp
+                    </a>
+                </div>
+                <div class="pricing-card" data-aos="fade-left">
+                    <h3>Deluxe Souvenir</h3>
+                    <ul class="price-features">
+                        <li>Chanson Masterisée Studio</li>
+                        <li>Clip Vidéo avec vos Photos/Vidéos</li>
+                        <li>Priorité absolue (Express)</li>
+                    </ul>
+                    <a href="https://wa.me/22999542520?text=Je%20souhaite%20le%20Pack%20Deluxe"
+                        class="btn btn-outline full-width">Devenir un VIP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="border-top: 1px solid #222; padding: 50px 0; background: #020202; text-align:center;">
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom:20px;">
+                <img src="assets/Logo Principal.png" alt="Melodis Logo" style="height: 30px;">
+            </div>
+            <p style="color: #444; font-size: 0.8rem;">&copy; <span id="year"></span> Melodis.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
