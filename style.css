@@ -298,11 +298,11 @@ h3 {
     position: absolute;
     inset: 0;
     /* IMAGE DE FOND */
-    background: url('assets/hero-bg.jpg') center/cover no-repeat;
+    background: url('assets/hero_bg.png') center/cover no-repeat;
     background-color: #1a1a1a;
     animation: kenBurns 20s infinite alternate;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.65;
 }
 
 @keyframes kenBurns {
@@ -846,6 +846,30 @@ h3 {
 
 .price-features i {
     color: var(--gold-main);
+}
+
+/* Style du mockup 3D de smartphone dans les prix */
+.pack-mockup-wrapper {
+    width: 100%;
+    max-width: 170px;
+    margin: 20px auto 10px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pack-mockup-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.6));
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Effet 3D discret au survol de la carte tarifaire */
+.pricing-card.popular:hover .pack-mockup-img {
+    transform: scale(1.08) rotateY(-8deg) translateY(-5px);
+    filter: drop-shadow(0 15px 25px rgba(199, 174, 106, 0.25));
 }
 
 /* =========================================
