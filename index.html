@@ -161,41 +161,59 @@
     <!-- 6. DÉMOS -->
     <section id="demos" class="section-padding">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Écoutez le Résultat</h2>
-            <p class="section-subtitle" data-aos="fade-up">De vraies créations pour nos clients.</p>
-            <div class="audio-grid">
-                <div class="card-glass" data-aos="fade-right">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <h3>Mariage Romantique</h3>
-                        <i class="fa-solid fa-heart text-gold"></i>
+            <h2 class="section-title" data-aos="fade-up">Écoutez nos Créations</h2>
+            <p class="section-subtitle" data-aos="fade-up">Découvrez un aperçu des émotions musicales conçues sur-mesure pour nos clients.</p>
+            
+            <div class="player-container" data-aos="fade-up">
+                <!-- Panneau du lecteur actif -->
+                <div class="active-player-card">
+                    <div class="vinyl-wrapper">
+                        <div class="vinyl-disk" id="player-vinyl">
+                            <div class="vinyl-center"></div>
+                        </div>
+                        <div class="music-wave" id="music-wave">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
-                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Piano Voix</p>
-                    <audio controls preload="metadata"
-                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
-                        <source src="assets/demo1.mp3" type="audio/mpeg">
-                    </audio>
+                    <div class="active-track-info">
+                        <h3 id="active-track-title">Sélectionnez une chanson</h3>
+                        <p id="active-track-style" class="text-gold">Style : Aucun</p>
+                    </div>
+                    <!-- Contrôles personnalisés de l'audio -->
+                    <div class="custom-audio-controls">
+                        <!-- Élément audio masqué, géré par JS -->
+                        <audio id="main-audio" preload="metadata"></audio>
+                        
+                        <div class="time-display">
+                            <span id="current-time">0:00</span>
+                            <span id="duration-time">0:00</span>
+                        </div>
+                        
+                        <div class="progress-bar-container" id="progress-container">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                        
+                        <div class="control-buttons">
+                            <button class="control-btn" id="prev-btn" title="Précédent"><i class="fa-solid fa-backward-step"></i></button>
+                            <button class="control-btn play-pause-btn" id="play-btn" title="Lire / Pause"><i class="fa-solid fa-play"></i></button>
+                            <button class="control-btn" id="next-btn" title="Suivant"><i class="fa-solid fa-forward-step"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-glass" data-aos="fade-up">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <h3>Anniversaire Festif</h3>
-                        <i class="fa-solid fa-cake-candles text-gold"></i>
+
+                <!-- Panneau de la playlist -->
+                <div class="playlist-card">
+                    <h3 class="playlist-header">
+                        <i class="fa-solid fa-compact-disc" style="margin-right:10px; color:var(--gold-main);"></i> 
+                        Liste des Créations
+                    </h3>
+                    <div class="playlist-tracks" id="playlist-tracks">
+                        <!-- Inséré dynamiquement par JavaScript -->
                     </div>
-                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Afrobeat</p>
-                    <audio controls preload="metadata"
-                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
-                        <source src="assets/Joy.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="card-glass" data-aos="fade-left">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <h3>Jingle Pro</h3>
-                        <i class="fa-solid fa-briefcase text-gold"></i>
-                    </div>
-                    <p style="font-size:0.85rem; color:#aaa; margin:10px 0;">Style: Dynamique</p>
-                    <audio controls preload="metadata"
-                        style="width:100%; filter: sepia(1) hue-rotate(-50deg) saturate(3);">
-                        <source src="assets/demo3.mp3" type="audio/mpeg">
-                    </audio>
                 </div>
             </div>
         </div>
